@@ -1,0 +1,7 @@
+name = Florida Drupal Camp Ctools
+description = A look at cool Ctools Plugins
+package = Development
+core = 7.x
+
+
+
