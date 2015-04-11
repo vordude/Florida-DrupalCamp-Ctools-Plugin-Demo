@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * A Content type plugin that uses our custom context.
+ */
+
 $plugin = array(
   'title' => t('Flickr Image Display'),
   'description' => t('Honestly, it is a stretch to show off relationships.)'),

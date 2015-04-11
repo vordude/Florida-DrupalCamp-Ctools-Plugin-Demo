@@ -1,11 +1,14 @@
 <?php
-
+/**
+ * @file
+ * Simple module file for Ctools Demo.
+ */
 
 /**
  * Implements hook_ctools_plugin_directory().
  */
 function florida_ctools_plugin_directory($module, $plugin) {
-    if ($module == 'ctools' && !empty($plugin)) {
-        return "plugins/$plugin";
-    }
+  if ($module == 'ctools' && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
 }

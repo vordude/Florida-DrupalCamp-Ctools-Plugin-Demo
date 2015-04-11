@@ -33,7 +33,7 @@ function florida_flickr_relationship_context($context, $conf) {
   $node = $context->data;
   $data = new stdClass();
 
-  $data->flickr_images =  florida_get_flickr_images($node);
+  $data->flickr_images = florida_get_flickr_images($node);
   $data->original_context = $node;
 
   // Custom context goes out.
@@ -51,6 +51,7 @@ function florida_flickr_relationship_settings($conf) {
  * Helper that probably badly uses the Flickr api to get 4 images that might be like our node's title.
  *
  * @param $node
+ *
  * @return array
  */
 function florida_get_flickr_images($node) {
@@ -63,7 +64,7 @@ function florida_get_flickr_images($node) {
   if ($result->code == '200') {
     $image_data = drupal_json_decode($result->data);
     if (!empty($image_data['photos']['photo'])) {
-      foreach($image_data['photos']['photo'] as $photo) {
+      foreach ($image_data['photos']['photo'] as $photo) {
         $image_path = 'https://farm' . $photo['farm'] . '.staticflickr.com/' . $photo['server'] . '/' . $photo['id'] . '_' . $photo['secret'] . '_n.jpg';
         $variables = array(
           'path' => $image_path,

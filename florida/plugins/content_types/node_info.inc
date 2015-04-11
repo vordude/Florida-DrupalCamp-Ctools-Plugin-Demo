@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Defines the top related content list panels pane.
@@ -43,6 +44,9 @@ function florida_node_info_form($form, &$form_state) {
   return $form;
 }
 
+/*
+ * Submit Handler for our settings form.
+ */
 function florida_node_info_form_submit($form, &$form_state) {
   foreach (array_keys($form_state['plugin']['defaults']) as $key) {
     $form_state['conf'][$key] = $form_state['values'][$key];
